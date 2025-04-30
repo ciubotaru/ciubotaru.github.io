@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Split and Merge</title>
+</head>
+<body>
+<input type="file" id="split_input"><input type="button" value="Clear" id="split_input_clear" onClick="split_input_clear();" disabled>
+<br/>
+Total size: <span id="split_input_size">0</span> bytes<br/>
+Chunk size: <span id="split_chunk_size">1048576</span> bytes
+<input type="button" value="-" onClick="chunk_resize(0.5);">
+<input type="button" value="+" onClick="chunk_resize(2);">
+<br/>
+Nr of chunks: <span id="split_chunk_nr">0</span><br/>
+<input type="button" id="split_btn" onClick="split();" value="Split" disabled> OR <input type="button" id="merge_btn" onClick="merge();" value="Merge"><br/>
+<span id="download"></span>
+<script src="script.js"></script>
+</body>
+</html>
